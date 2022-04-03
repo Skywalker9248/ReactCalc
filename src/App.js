@@ -102,7 +102,7 @@ const CalcBox = styled(Box)({
   borderRadius:'15px', /* added */
   background: 'black',
   display: 'flex',
-  width:'50vw',
+  width:'300px',
   flexDirection: 'column',
   padding: '15px 15px',
   marginTop:'15px',
@@ -117,7 +117,7 @@ const Disp = styled(Box)({
   align:'center',
   background: '#5f9ea0',
   display: 'flex',
-  width:'40vw',
+  width:'275px',
   height:'40px',
   flexDirection: 'column',
   padding: '15px 15px',
@@ -132,7 +132,7 @@ const Pad = styled(Box)({
   align:'center',
   background: 'black',
   display: 'flex',
-  width:'40vw',
+  width:'275px',
   // height:'140px',
   flexDirection: 'column',
   padding: '15px 15px',
@@ -144,7 +144,8 @@ const Pad = styled(Box)({
 const R = styled(Box)({
   background: 'black',
   display: 'flex',
-  width:'40vw',
+  width:'175px',
+  
 });
 
 
@@ -154,7 +155,7 @@ const Key = styled(Button)({
   color:'white',
   position:'relative',
   flexGrow:'1',
-  width:'9.5vw',
+  width:'25px',
 });
 
 const OKey = styled(Button)({
@@ -163,7 +164,7 @@ const OKey = styled(Button)({
   color:'white',
   position:'relative',
   flexGrow:'1',
-  width:'9.5vw',
+  width:'25px',
 });
 
 const FKey = styled(Button)({
@@ -172,7 +173,7 @@ const FKey = styled(Button)({
   color:'white',
   position:'relative',
   flexGrow:'1',
-  width:'9.5vw',
+  width:'25px',
 });
 
 const No = styled(Typography)({
@@ -181,7 +182,7 @@ const No = styled(Typography)({
     color:'black',
     fontWeight: 500,
     letterSpacing: '0.5px',
-    fontSize:'32px',
+    fontSize:'18px',
     padding : '5px'
 
 });
