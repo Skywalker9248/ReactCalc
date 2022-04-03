@@ -59,8 +59,8 @@ function App() {
             
             <R>
               <FKey onClick={clr}>C</FKey>
-              <FKey onClick={del}>→</FKey>
-              <FKey onClick={cal}>=</FKey>
+              <FKey onClick={del}>←</FKey>
+              <OKey onClick={() => updateCalc('%')}>%</OKey>
               <OKey onClick={() => updateCalc('/')}>/</OKey>
             </R>
             <R>
@@ -85,7 +85,7 @@ function App() {
               <Key onClick={() => updateCalc('.')}>.</Key>
               <Key onClick={() => updateCalc('0')}>0</Key>
               <Key onClick={() => updateCalc('00')}>00</Key>
-              <OKey onClick={() => updateCalc('%')}>%</OKey>
+              <FKey onClick={cal}>=</FKey>
             </R>
           </Pad>
           </Grid>
