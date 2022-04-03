@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Grid, Typography, Button,Box} from "@material-ui/core";
 import { styled } from '@material-ui/core/styles';
+import { maxWidth } from "@mui/system";
+import { getSpaceUntilMaxLength } from "@testing-library/user-event/dist/utils";
 
 function App() {
   const [calc, setCalc]= useState("");
@@ -64,21 +66,21 @@ function App() {
               <OKey onClick={() => updateCalc('/')}>/</OKey>
             </R>
             <R>
-              <Key onClick={() => updateCalc('9')}>9</Key>
-              <Key onClick={() => updateCalc('8')}>8</Key>
               <Key onClick={() => updateCalc('7')}>7</Key>
+              <Key onClick={() => updateCalc('8')}>8</Key>
+              <Key onClick={() => updateCalc('9')}>9</Key>
               <OKey onClick={() => updateCalc('*')}>*</OKey>
             </R>
             <R>
-              <Key onClick={() => updateCalc('6')}>6</Key>
-              <Key onClick={() => updateCalc('5')}>5</Key>
               <Key onClick={() => updateCalc('4')}>4</Key>
+              <Key onClick={() => updateCalc('5')}>5</Key>
+              <Key onClick={() => updateCalc('6')}>6</Key>
               <OKey onClick={() => updateCalc('-')}>-</OKey>
             </R>
             <R>
-              <Key onClick={() => updateCalc('3')}>3</Key>
-              <Key onClick={() => updateCalc('2')}>2</Key>
               <Key onClick={() => updateCalc('1')}>1</Key>
+              <Key onClick={() => updateCalc('2')}>2</Key>
+              <Key onClick={() => updateCalc('3')}>3</Key>
               <OKey onClick={() => updateCalc('+')}>+</OKey>
             </R>
             <R>
@@ -123,7 +125,12 @@ const Disp = styled(Box)({
   padding: '15px 15px',
   marginTop:'15px',
   position:'relative',
-  boxShadow: '0px 7px 29px 0px rgba(100, 100, 111, 0.2)'
+  boxShadow: '0px 7px 29px 0px rgba(100, 100, 111, 0.2)',
+  overflow: 'hidden',
+  textOverflow:'ellipsis',
+  whiteSpace:'nowrap',
+  getSpaceUntilMaxLength : '20ch'
+
 });
 
 const Pad = styled(Box)({
@@ -180,9 +187,10 @@ const No = styled(Typography)({
   
     fontFamily: 'Orbitron',
     color:'black',
-    fontWeight: 500,
+    fontStyle:'bold',
+    fontWeight: 100,
     letterSpacing: '0.5px',
-    fontSize:'18px',
+    fontSize:'19px',
     padding : '5px'
 
 });
